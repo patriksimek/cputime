@@ -1,0 +1,37 @@
+{
+	"author": {
+		"name": "Patrik Simek",
+		"url": "http://patriksimek.cz"
+	},
+	"name": "cputime",
+	"description": "Multiplatform CPU time in pure JS.",
+	"keywords": [
+		"cpu",
+		"time"
+	],
+	"version": "0.1.1",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/patriksimek/node-cputime"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/mit-license.php"
+		}
+	],
+	"dependencies": {
+		
+	},
+	"devDependencies": {
+		"coffee-script": "^1.7.1",
+		"mocha": "^1.12.0"
+	},
+	"engines": {
+		"node": ">=0.10"
+	},
+	"scripts": {
+		"test": "mocha"
+	}
+}
