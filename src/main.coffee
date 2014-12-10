@@ -12,6 +12,8 @@ if os.platform() is 'linux'
 		
 		CLK_TCK = parseFloat stdout
 
+module.exports.includeChildProcesses = false
+
 ###
 @param {Number} [pid] Process ID.
 @callback done Callback.
@@ -34,7 +36,9 @@ module.exports.cpuTime = (pid, done) ->
 				if err then return done err
 				
 				parts = data.split ' '
-				done null, (parseInt(parts[13]) + parseInt(parts[14])) / CLK_TCK
+				time = parseInt(parts[13]) + parseInt(parts[14])
+				if module.exports.includeChildProcesses then time += parseInt(parts[15]) + parseInt(parts[16])
+				done null, time / CLK_TCK
 			
 		when 'darwin'
 			cp.exec "ps -p #{pid} -o time", (err, stdout, stderr) ->

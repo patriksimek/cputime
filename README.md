@@ -20,6 +20,10 @@ cput.cpuTime(1337, function(err, time) {
 });
 ```
 
+## Options
+
+`cput.includeChildProcesses` - Default: `false`. Doesn't work on Windows and OS X.
+
 <a name="license" />
 ## License
 

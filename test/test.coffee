@@ -1,7 +1,7 @@
 cputime = require '../'
 assert = require "assert"
 
-utils = require '../src/utils'
+utils = require '../lib/utils'
 
 describe 'CPU Time', ->
 	before (done) ->
